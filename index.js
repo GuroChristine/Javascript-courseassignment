@@ -1,10 +1,7 @@
-let data = await response.text();
-console.log(data);
+async function getPokemon() {
+    const pokemonContainer = document.querySelector(".pokemon");
 
-async function getEvolutionChains() {
-    const pokemonContainer = document.querySelector(".evolution");
-
-    let response = await fetch("https://pokeapi.co/api/v2/evolution-chain/", { 
+    let response = await fetch("https://pokeapi.co/api/v2/pokemon/", { 
       method: "GET",
     });
     
@@ -15,18 +12,18 @@ async function getEvolutionChains() {
 
     for(let i = 0; i < res.length; i++){
         pokemonContainer.innerHTML += `
-            <div class="evolution">
+            <div class="poke">
             <div class="title">
                 <h2>${res[i].name}</h2>
             </div>
             <div class="info">
                 <p>${res[i].url}</p>
+                <a href="details.html?name=${res[i].name}">Details</a>
             </div>
             </div>
         `
     }
     
 }
-getEvolutionChains();
 
-
+getPokemon();
