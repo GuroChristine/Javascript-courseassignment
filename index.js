@@ -1,7 +1,3 @@
-method: "Get",
-headers; headersList
-
-
 let data = await response.text();
 console.log(data);
 
@@ -32,3 +28,5 @@ async function getEvolutionChains() {
     
 }
 getEvolutionChains();
+
+
