@@ -12,7 +12,7 @@ body {
 .header {
     align-items: center;
     position: relative;
-    background-image: url('');
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi.svg?sanitize=true');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 400px;
